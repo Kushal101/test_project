@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:test_project/modules/Signup/Signup_screen.dart';
 import 'package:test_project/styles/size_config.dart';
 import 'package:test_project/styles/styleKit.dart';
 import 'package:test_project/utils/constants.dart';
@@ -86,7 +86,7 @@ class IntroScreen extends StatelessWidget {
                           Padding(padding: EdgeInsets.symmetric(horizontal: SizeConfig.screenWidth*0.045),child:
                           Text(AppConstants.introDescription,style: $styles.text.quickSand400_14hex888888_19,textAlign: TextAlign.center,)),
                           SizedBoxHeight24,
-                         CustomButton(buttonHeight: SizeConfig.screenHeight*0.08, text: "Skip", buttonWidth: SizeConfig.screenWidth*0.4, buttonRadius: 5, verticalPadding:EdgeInsets.zero,buttonColor:$styles.colors.hexF8615A ,textStyle: $styles.text.quickSand700_14white_17,)
+                         CustomButton(buttonHeight: SizeConfig.screenHeight*0.08, text: "Skip", buttonWidth: SizeConfig.screenWidth*0.4, buttonRadius: 5, verticalPadding:EdgeInsets.zero,buttonColor:$styles.colors.hexF8615A ,textStyle: $styles.text.quickSand700_14white_17,onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignupScreen()));},)
                         ]),
                   )),
 

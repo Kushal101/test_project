@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_project/modules/Signup/Signup_screen.dart';
-import 'package:test_project/modules/Signup/signupcubit.dart';
 import 'package:test_project/modules/introscreen.dart';
 import 'package:test_project/styles/size_config.dart';
 import 'package:test_project/styles/styleKit.dart';
@@ -20,11 +19,7 @@ class MyApp extends StatelessWidget {
     $styles = AppStyle(
       appSize: Size(MediaQuery.of(context).size.width, MediaQuery.of(context).size.height),
     );
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context) =>PasswordVisibilityCubit()),
-        ],
-      child:MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -45,8 +40,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SignupScreen(),
-    ));
+      home: const IntroScreen(),
+    );
   }
 }
 
